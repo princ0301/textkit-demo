@@ -7,7 +7,7 @@ def word_count(text: str) -> int:
 
 def truncate(text: str, max_len: int, suffix: str = "...") -> str:
     """Shorten text to at most max_len characters, ending with suffix if it was cut."""
-    if len(text) < max_len:
+    if len(text) <= max_len:
         return text
     return text[: max_len - len(suffix)] + suffix
 
